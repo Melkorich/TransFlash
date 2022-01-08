@@ -1,0 +1,98 @@
+.hero {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+
+  &__box {
+    padding: 165px 0 200px 0;
+    max-width: 697px;
+    position: relative;
+  }
+
+  &__subtitle {
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.8;
+    @extend %Raleway-500;
+    padding-left: 13px;
+    margin-bottom: 28px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+    }
+
+    &::before {
+      top: 4px;
+      left: 0;
+      background-image: url(../images/tangle.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 6px;
+      height: 13px;  
+    }
+
+    &::after {
+      bottom: 0;
+      right: 0;
+      width: calc(100% - 13px);
+      height: 1px;
+      background-color:#B3EE4A;
+    }
+  }
+
+  &__title {
+    font-size: 56px;
+    line-height: 1.3;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    @extend %Raleway-700;
+    margin-bottom: 39px;
+  }
+
+  &__text {
+    max-width: 560px;
+    margin-bottom: 64px;
+    letter-spacing: 0.4px;
+  }
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 50%;
+  right: 10%;
+  outline: transparent;
+
+  li {
+    line-height: 0;
+    margin-bottom: 20px;
+  }
+
+  li button {
+    padding: 0;
+    margin: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    outline: none;
+    font-size: 0;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+
+  .slick-active {
+    button {
+      background-color: #fff;
+    }
+  }
+}
+

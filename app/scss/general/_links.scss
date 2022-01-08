@@ -1,0 +1,20 @@
+.link {
+  color: #fff;
+  background-color: $accent;
+  font-size: 16px;
+  line-height: 1.2;
+  @extend %Raleway-600;
+  padding: 16px 20px;
+  border-radius: 4px;
+  display: inline-block;
+  border: 1px solid transparent;
+  transition: border 0.3s, background-color 0.4s;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: rgba(71, 191, 111, 0.6);
+    border: 1px solid #31A357;
+  }
+
+}

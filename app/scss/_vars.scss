@@ -10,9 +10,46 @@ $xsm: 320px;
 
 
 //main colors
+$accent: #47BF6F;
+$headings: #000000;
+$text: #6C6C6C;
 
 
 //fonts
+%OpenSans-500 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+}
+
+%OpenSans-600 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+%OpenSans-700 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+%Raleway-400 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+
+%Raleway-500 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
+
+%Raleway-600 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+%Raleway-700 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
 
 
 // fansybox error

@@ -1,0 +1,128 @@
+.benefits {
+  padding: 160px 0 124px;
+
+  &__heading {
+    max-width: 550px;
+    width: 100%;
+    margin-right: 110px;
+    display: inline-block;
+    padding-left: 10px;
+  }
+
+  &__title {
+    padding-top: 32px;
+  }
+
+  &__text {
+    color: $text;
+  }
+
+  &__items {
+   display: flex;
+   margin: 0 -15px;
+   flex-wrap: wrap;
+  }
+
+  &__item {
+    padding: 0 15px 36px;
+    display: flex;
+
+    &:hover:nth-child(2) {
+      .benefits-card {
+        background-image: url(../images/benefits/sea.jpg);
+        z-index: 1;
+      }
+
+    }
+
+    &:hover:nth-child(3) {
+      .benefits-card {
+        background-image: url(../images/benefits/air.jpg);
+        z-index: 1;
+      }
+    }
+
+    &:hover:nth-child(4) {
+      .benefits-card {
+        background-image: url(../images/benefits/rail.jpg);
+        z-index: 1;
+      }
+    }
+
+    &:hover:nth-child(5) {
+      .benefits-card {
+        background-image: url(../images/benefits/land.jpg);
+        z-index: 1;
+      }
+    }
+
+    &:hover:nth-child(6) {
+      .benefits-card {
+        background-image: url(../images/benefits/warehousing.jpg);
+        z-index: 1;
+      }
+    }
+
+    &:hover:nth-child(7) {
+      .benefits-card {
+        background-image: url(../images/benefits/clearance.jpg);
+        z-index: 1;
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+
+.benefits-card {
+  padding: 36px 28px 32px;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 6px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.5s linear;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0px 28px 60px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+
+    .benefits-card__text {
+      color: #181818;
+    }
+  }
+
+  &__image {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 28px;
+
+    .benefits-card__img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    color: $headings;
+    font-size: 22px;
+    line-height: 1.2;
+    text-transform: capitalize;
+    @extend %Raleway-600;
+    margin-bottom: 24px;
+    flex: 1 1 auto;
+  }
+
+  &__text {
+    color: $text;
+    transition: color 0.5s;
+  }
+}

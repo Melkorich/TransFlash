@@ -5,5 +5,30 @@
 @import 'libs';
 @import 'global';
 
+//general
+@import 'general/links';
+
+//header
+@import 'header/header';
+
+//hero-slider
+@import 'hero-slider/hero-slider';
+
+//benefits
+@import 'benefits/benefits';
+
+//transportation
+@import 'transportation/transportation';
+
+//specialist
+@import 'specialist/specialist';
+
+//process
+@import 'process/process';
+
+
+//blockquote
+@import 'blockquote/blockquote';
+
 @import 'media'; 
  
