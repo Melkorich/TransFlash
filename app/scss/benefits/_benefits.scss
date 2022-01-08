@@ -13,10 +13,6 @@
     padding-top: 32px;
   }
 
-  &__text {
-    color: $text;
-  }
-
   &__items {
    display: flex;
    margin: 0 -15px;
@@ -27,44 +23,44 @@
     padding: 0 15px 36px;
     display: flex;
 
-    &:hover:nth-child(2) {
-      .benefits-card {
+    &:nth-child(2) {
+      .benefits-card:hover {
         background-image: url(../images/benefits/sea.jpg);
         z-index: 1;
       }
 
     }
 
-    &:hover:nth-child(3) {
-      .benefits-card {
+    &:nth-child(3) {
+      .benefits-card:hover {
         background-image: url(../images/benefits/air.jpg);
         z-index: 1;
       }
     }
 
-    &:hover:nth-child(4) {
-      .benefits-card {
+    &:nth-child(4) {
+      .benefits-card:hover {
         background-image: url(../images/benefits/rail.jpg);
         z-index: 1;
       }
     }
 
-    &:hover:nth-child(5) {
-      .benefits-card {
+    &:nth-child(5) {
+      .benefits-card:hover {
         background-image: url(../images/benefits/land.jpg);
         z-index: 1;
       }
     }
 
-    &:hover:nth-child(6) {
-      .benefits-card {
+    &:nth-child(6) {
+      .benefits-card:hover {
         background-image: url(../images/benefits/warehousing.jpg);
         z-index: 1;
       }
     }
 
-    &:hover:nth-child(7) {
-      .benefits-card {
+    &:nth-child(7) {
+      .benefits-card:hover {
         background-image: url(../images/benefits/clearance.jpg);
         z-index: 1;
       }
@@ -77,8 +73,6 @@
   }
 }
 
-
-
 .benefits-card {
   padding: 36px 28px 32px;
   width: 300px;
@@ -87,7 +81,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  transition: all 0.5s linear;
+  transition: all 0.4s linear;
   position: relative;
 
   &:hover {

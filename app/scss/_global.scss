@@ -58,7 +58,7 @@ body {
     width: 1px;
     height: 39px;
   }
-}
+} 
 
 .title {
   color: $headings;
@@ -67,6 +67,15 @@ body {
   letter-spacing: 0.01em;
   @extend %Raleway-700;
   margin-bottom: 36px;
+}
+
+.text {
+  color: $text;
+}
+
+.social-icon{
+  fill: #fff;
+  transition: fill 0.3s;
 }
 
 

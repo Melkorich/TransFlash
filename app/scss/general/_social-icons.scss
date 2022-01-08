@@ -1,0 +1,31 @@
+.social-icons {
+  display: flex;
+  position: absolute;
+  left: 24px;
+  bottom: -40px;
+  opacity: 0;
+  transition: opacity 0.5s, bottom 0.3s;
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &__link {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+  
+    &:hover {
+      background-color: $accent;
+    }
+  }
+}
+
+
+

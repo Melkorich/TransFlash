@@ -1,0 +1,165 @@
+.contacts {
+  padding: 160px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-width: 520px;
+    width: 100%;
+  }
+
+  &__form {
+    width: 520px;
+  }
+
+  &__text {
+    margin-bottom: 75px;
+  }
+
+  &__item {
+    padding-left: 28px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 2px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 28px;
+  }
+
+  &__item:nth-child(1)::before {
+    background-image: url(../images/contacts/phone.svg);
+  }
+
+  &__item:nth-child(2)::before {
+    background-image: url(../images/contacts/mail.svg);
+  }
+
+  &__item:nth-child(3)::before {
+    background-image: url(../images/contacts/map.svg);
+  }
+
+  &__name {
+    color: $text;
+    @extend %Raleway-600;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  &__tel {
+    display: block;
+    color: $headings;
+    font-size: 28px;
+    line-height: 1.4;
+    @extend %Raleway-700;
+    letter-spacing: 0.01em;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+  }
+
+  &__mail,
+  &__adress {
+    color: $headings;
+    font-size: 18px;
+    line-height: 27px;
+    @extend %Raleway-600;
+    display: block;
+  }
+
+  &__form-title {
+    position: relative;
+    padding-left: 46px;
+    font-size: 22px;
+    line-height: 1.45;
+    @extend %Raleway-700;
+    margin-bottom: 60px;
+    letter-spacing: 0.01em;
+    color: $headings;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url(../images/contacts/send.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 34px;
+      height: 34px;
+      top: 6px;
+      left: 0;
+    }
+  }
+}
+
+.form {
+  &__input {
+    display: block;
+    margin-bottom: 36px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #7A7A7A;
+    color: $headings;
+    font-size: 16px;
+    line-height: 1.18;
+    @extend %Raleway-600;
+
+    &:placeholder {
+      color: $text;
+      font-size: 16px;
+      line-height: 1.18;
+      @extend %Raleway-500;
+    }
+  }
+
+  &__textarea {
+    display: block;
+    width: 100%;
+    resize: none;
+    height: 80px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #7A7A7A;
+    margin-bottom: 60px;
+    color: $headings;
+    font-size: 16px;
+    line-height: 1.18;
+    @extend %Raleway-600;
+
+    &:placeholder {
+      color: $text;
+      font-size: 16px;
+      line-height: 1.18;
+      @extend %Raleway-500;
+    }
+  }
+
+  &__btn {
+    padding: 15px 5px 15px 28px;
+    position: relative;
+    width: 188px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url(../images/contacts/telegram.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 24px;
+    }
+  }
+}

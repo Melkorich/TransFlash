@@ -1,0 +1,16 @@
+.our-goal {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 160px 0;
+
+  &__text {
+    font-size: 28px;
+    line-height: 1.4;
+    @extend %Raleway-700;
+    letter-spacing: 0.01em;
+    max-width: 740px;
+    margin: 0 auto;
+  }
+}
