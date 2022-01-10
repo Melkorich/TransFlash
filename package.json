@@ -21,6 +21,7 @@
     "jquery": "^3.6.0"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "slick-carousel": "^1.8.1"
   }
 }

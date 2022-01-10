@@ -25,5 +25,27 @@ $(function(){
     $('.process-item').removeClass('process-item--active');
     $($(this).attr('href')).addClass('process-item--active');
   });
- 
+
 });
+
+const mapBtn = document.querySelectorAll('.map__dot-btn');
+
+mapBtn.forEach(el => {
+  el.addEventListener('click' , (e) => {
+    const self = e.currentTarget;
+    const mapText = self.querySelector('.map__dot-text');
+
+    mapText.classList.toggle('map__dot-text--active');
+    self.classList.toggle('btn-circles--active');
+  });
+});
+
+
+AOS.init({
+  disable: 'mobile',
+  disable: 'phone', 
+  offset: 100, 
+  easing: 'ease', 
+  once: true,
+});
+
