@@ -21,7 +21,9 @@
     "jquery": "^3.6.0"
   },
   "dependencies": {
-    "aos": "^2.3.4",
-    "slick-carousel": "^1.8.1"
+    "animate.css": "^4.1.1",
+    "jquery.maskedinput": "^1.4.1",
+    "slick-carousel": "^1.8.1",
+    "wow.js": "^1.2.2"
   }
 }

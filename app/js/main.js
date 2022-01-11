@@ -26,7 +26,10 @@ $(function(){
     $($(this).attr('href')).addClass('process-item--active');
   });
 
-});
+  $("#phone").mask("+7 (999) 999-99-99");
+
+}); 
+
 
 const mapBtn = document.querySelectorAll('.map__dot-btn');
 
@@ -41,11 +44,14 @@ mapBtn.forEach(el => {
 });
 
 
-AOS.init({
-  disable: 'mobile',
-  disable: 'phone', 
-  offset: 100, 
-  easing: 'ease', 
-  once: true,
-});
+new WOW().init();
+
+
+// AOS.init({
+//   disable: 'mobile',
+//   disable: 'phone', 
+//   offset: 100, 
+//   easing: 'ease', 
+//   once: true,
+// });
 
