@@ -78,7 +78,7 @@ body {
 
   @include maxw($md) {
     font-size: 32px;
-  }
+  } 
 
   @include maxw($sm) {
     font-size: 28px;
