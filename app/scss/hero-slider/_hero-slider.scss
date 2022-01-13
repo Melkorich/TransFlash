@@ -8,6 +8,19 @@
     padding: 165px 0 200px 0;
     max-width: 697px;
     position: relative;
+
+    @include maxw($xl) {
+      padding: 110px 0 150px;
+    }
+
+    @include maxw($md) {
+      padding: 80px 0 100px ;
+      max-width: 500px;
+    }
+
+    @include maxw($sm) {
+      max-width: 100%;
+    }
   }
 
   &__subtitle {
@@ -51,12 +64,30 @@
     text-transform: capitalize;
     @extend %Raleway-700;
     margin-bottom: 39px;
+
+    @include maxw($lg) { 
+      font-size: 46px;
+      margin-bottom: 30px;
+    }
+
+    @include maxw($md) {
+      font-size: 32px;
+    }
+
+    @include maxw($sm) {
+      font-size: 26px;
+      margin-bottom: 25px;
+    }
   }
 
   &__text {
     max-width: 560px;
     margin-bottom: 64px;
     letter-spacing: 0.4px;
+
+    @include maxw($md) {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -66,9 +97,20 @@
   right: 10%;
   outline: transparent;
 
+  @include maxw($md) {
+    display: flex;
+    bottom: 8%;
+    left: 11px;
+  }
+
   li {
     line-height: 0;
     margin-bottom: 20px;
+
+    @include maxw($md) {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
   }
 
   li button {

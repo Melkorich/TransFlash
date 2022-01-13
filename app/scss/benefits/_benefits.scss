@@ -1,27 +1,68 @@
 .benefits {
   padding: 160px 0 124px;
 
+  @include maxw($lg) {
+    padding: 60px 0;
+  }
+
   &__heading {
     max-width: 550px;
     width: 100%;
     margin-right: 110px;
     display: inline-block;
     padding-left: 10px;
+
+    @include maxw($md) {
+     margin-right: 0;
+     max-width: 100%;
+     padding-left: 0;
+    }
   }
 
   &__title {
     padding-top: 32px;
+
+    @include maxw($md) {
+      padding-top: 0;
+      font-size: 32px;
+    }
+
+    @include maxw($sm) {
+      font-size: 28px;
+    }
+
+    @include maxw($xs) {
+      font-size: 24px;
+    }
   }
 
   &__items {
    display: flex;
    margin: 0 -15px;
    flex-wrap: wrap;
+
+    @include maxw($xxl) {
+      margin: 0 -10px;
+    }
+
+    @include maxw($md) {
+      margin: 0;
+      display: block;
+    }
   }
 
   &__item {
     padding: 0 15px 36px;
     display: flex;
+
+    @include maxw($xl) {
+      padding: 0;
+    }
+
+    @include maxw($md) {
+      display: block;
+      padding: 10px 0;
+    }
 
     &:nth-child(2) {
       .benefits-card:hover {
@@ -83,6 +124,11 @@
   background-size: cover;
   transition: all 0.4s linear;
   position: relative;
+
+  @include maxw($xs) {
+    width: 100%;
+    padding: 15px;
+  }
 
   &:hover {
     box-shadow: 0px 28px 60px rgba(0, 0, 0, 0.3);

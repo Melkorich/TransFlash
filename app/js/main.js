@@ -28,7 +28,24 @@ $(function(){
 
   $("#phone").mask("+7 (999) 999-99-99");
 
+  $('.menu__link').on('click', function() {
+    $('.menu__burger').removeClass('menu__burger--active');
+    $('.menu__list').removeClass('menu__list--active');
+  });
+
+
 }); 
+
+const menuBtn = document.querySelector('.menu__burger');
+const menuList = document.querySelector('.menu__list');
+
+menuBtn.addEventListener('click', function() {
+  menuList.classList.toggle('menu__list--active');
+  menuBtn.classList.toggle('menu__burger--active');
+  document.querySelector('body').classList.toggle('scroll-block');
+});
+
+
 
 
 const mapBtn = document.querySelectorAll('.map__dot-btn');
@@ -43,8 +60,9 @@ mapBtn.forEach(el => {
   });
 });
 
+wow = new WOW({ mobile: false })
+wow.init();
 
-new WOW().init();
 
 
 // AOS.init({
