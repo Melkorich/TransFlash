@@ -2,13 +2,21 @@
   background-color: #F8F8F8;
   padding: 160px 0;
 
+  @include maxw($lg) {
+    padding: 80px 0;
+  }
+
+  @include maxw( $sm) {
+    padding: 40px 0;
+  }
+
   &__title {
     margin-bottom: 80px;
-  }
+  } 
 }
 
 .article {
-  width: 410px;
+  // max-width: 410px;
   display: flex;
   flex-direction: column;
 
@@ -17,6 +25,14 @@
     height: 410px;
     margin-bottom: 25px;
     overflow: hidden;
+
+    @include maxw( $lg) {
+      height: 360px;
+    }
+
+    @include maxw( $xs) {
+      height: 300px;
+    }
 
     &:hover .article__img {
       transform: scale(1.1);
@@ -35,6 +51,11 @@
     color: $text;
     height: 28px;
     margin-bottom: 20px;
+
+    @include maxw( $xs) {
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
   }
 
   &__info--item {
@@ -44,6 +65,10 @@
     line-height: 1.5;
     @extend %Raleway-600;
     font-feature-settings: 'pnum' on, 'lnum' on;
+
+    @include maxw( $lg) {
+      font-size: 16px;
+    }
 
     &::before {
       position: absolute;
@@ -58,6 +83,12 @@
     margin-right: 20px;
     padding-right: 20px;
 
+    @include maxw( $xs) {
+      margin-right: 0;
+      padding-right: 0;
+      margin-bottom: 10px;
+    }
+
     &::after {
       position: absolute;
       content: '';
@@ -66,6 +97,10 @@
       background-color: #D7D7D7;
       right: 0;
       top: 0;
+
+      @include maxw( $xs) {
+        display: none;
+      }
     }
   }
 
@@ -88,6 +123,12 @@
     @extend %Raleway-700;
     letter-spacing: 0.01em;
     margin-bottom: 16px;
+
+    @include maxw( $xs) {
+      font-size: 22px;
+      padding-top: 10px;
+      margin-bottom: 10px;
+    }
   }
 
   &__text {
@@ -134,18 +175,16 @@
   display: flex;
   width: 100%;
   min-width: 0px;
-  margin: 0 -15px;
+  margin: 0 -10px;
 
   &__item {
-    display: flex;
-    flex: 0 0 33.333%;
-    padding: 0 15px;
+    padding: 0 10px;
   }
   
   .slick-arrow {
     position: absolute;
     top: -80px;
-    right: 0;
+    right: 10px;
     z-index: 5;
     outline: none;
     border: none;
@@ -159,7 +198,7 @@
   }
 
   .slick-prev {
-    right: 40px;
+    right: 50px;
   }
 
   .slick-disabled {

@@ -6,8 +6,17 @@
   opacity: 0;
   transition: opacity 0.5s, bottom 0.3s;
 
+  @include maxw($sm) {
+    opacity: 1;
+    bottom: 18px;
+  }
+
   &__item:not(:last-child) {
     margin-right: 8px;
+
+    @include maxw($sm) {
+      margin-right: 15px;
+    }
   }
 
   &__link {
@@ -20,6 +29,10 @@
     justify-content: center;
     align-items: center;
     transition: background-color 0.2s;
+
+    @include maxw($sm) {
+      background-color: $accent;
+    }
   
     &:hover {
       background-color: $accent;

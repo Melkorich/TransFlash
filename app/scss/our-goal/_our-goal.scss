@@ -5,6 +5,14 @@
   text-align: center;
   padding: 160px 0;
 
+  @include maxw($lg) {
+    padding: 100px 0;
+  }
+
+  @include maxw($sm) {
+    padding: 60px 0;
+  } 
+
   &__text {
     font-size: 28px;
     line-height: 1.4;
@@ -12,5 +20,13 @@
     letter-spacing: 0.01em;
     max-width: 740px;
     margin: 0 auto;
+
+    @include maxw($lg) {
+      font-size: 24px;
+    }
+
+    @include maxw($sm) {
+      font-size: 20px;
+    }
   }
 }

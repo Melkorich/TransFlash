@@ -5,9 +5,21 @@
   background-attachment: fixed;
   padding: 200px 0 160px 0;
 
+  @include maxw($lg) {
+    padding: 80px 0;
+  }
+ 
+  @include maxw($xs) {
+    padding: 60px 0;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include maxw($xxl) {
+      display:block;
+    }
     
   }
 
@@ -15,10 +27,23 @@
     max-width: 550px;
     width: 100%;
     margin-right: 100px;
+
+    @include maxw($xxl) {
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+
+    @include maxw($sm) {
+      max-width:100%;
+    }
   } 
 
   &__text {
     margin-bottom: 80px;
+
+    @include maxw($xxl) {
+      margin-bottom: 40px;
+    }
   }
 
   &__link {
@@ -27,16 +52,39 @@
 
   &__items {
     display: inline-block;
+
+    @include maxw($xxl) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include maxw($xs) {
+      display: block;
+    }
   }
 
   &__item {
     padding: 10px;
     display: inline-block;
+
+    @include maxw($xxl) {
+      display: flex;
+      padding: 10px 10px 10px 0;
+    }
+
+    @include maxw($xs) {
+      display: block;
+      padding: 10px 0;
+    }
   } 
 
   &__item:nth-child(1),
   &__item:nth-child(3){
-   transform: translateY(60px);
+    transform: translateY(60px);
+
+    @include maxw($xxl) {
+      transform: translateY(0px);
+    }
   }
 
   &__item--black .specialist__item-box {
@@ -55,13 +103,18 @@
     display: flex;
     flex-direction: column;
     width: 291px;
-    height: 212px;
+    min-height: 212px;
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: #fff;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.08);
     border-radius: 6px;
+
+    @include maxw($xs) {
+      max-width:100%;
+      width: 100%;
+    }
   }
 
   &__top {
@@ -89,6 +142,10 @@
     @extend %Raleway-700;
     color: $headings;
     font-feature-settings: 'pnum' on, 'lnum' on;
+
+    @include maxw($xs) {
+      font-size: 38px;
+    }
   }
 
   &__bottom {

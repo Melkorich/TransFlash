@@ -4,11 +4,34 @@ background-color: #032203;
   &__top {
     padding: 160px 0 120px;
     display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+    @include maxw($xl) {
+      flex-wrap: wrap;
+    }
+
+    @include maxw($lg) {
+      padding: 60px 0 80px;
+    }
+
+    @include maxw($sm) {
+      padding: 40px 0;
+    }
   }
 
   &__info {
     width: 300px;
     margin-right: 82px;
+
+    @include maxw($lg) {
+      padding-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include maxw($sm) {
+      width: 100%;
+      padding-top: 0;
+    }
   }
 
   .footer-logo {
@@ -33,6 +56,16 @@ background-color: #032203;
   &__block {
     width: 190px;
     margin-right: 60px;
+
+    @include maxw($lg) {
+      padding-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include maxw($sm) {
+      width: 100%;
+      margin-right: 0;
+    }
   }
 
   &__heading {
@@ -41,6 +74,10 @@ background-color: #032203;
     font-size: 22px;
     line-height: 1.18;
     text-transform: capitalize;
+
+    @include maxw($xs) {
+      margin-bottom: 20px;
+    }
   }
 
   &__item:not(:last-child) {
@@ -52,6 +89,10 @@ background-color: #032203;
    line-height: 1.16;
    @extend %Raleway-500;
    transition: color 0.3s, text-decoration 0.4s;
+
+   @include maxw($xs) {
+     font-size: 16px;
+   }
 
     &:focus,
     &:hover,
@@ -79,9 +120,24 @@ background-color: #032203;
 
   &__subscribe {
     width: 410px;
+
+    @include maxw($xl) {
+      padding-top: 30px;
+    }
+
+    @include maxw($sm) {
+      display: block;
+      width: 100%;
+    }
   }
+
   &__text-form {
     max-width: 374px;
+  }
+
+  &__rights {
+    text-align: center;
+    padding: 32px 15px;
   }
 }
 
@@ -97,11 +153,14 @@ background-color: #032203;
     @extend %Raleway-400;
     color: $text;
     padding: 16px;
-    // display: inline-flex;
     border-radius: 4px 0 0 4px;
     border: transparent;
     max-width: 358px;
     width: 100%;
+
+    @include maxw($sm) {
+      max-width: 100%;
+    }
  
     &::placeholder {
       font-size: 16px;
@@ -131,4 +190,6 @@ background-color: #032203;
       border: 1px solid #31A357;
     }
   }
+
+  
 }

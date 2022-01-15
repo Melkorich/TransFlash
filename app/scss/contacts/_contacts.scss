@@ -1,22 +1,50 @@
 .contacts {
   padding: 160px 0;
 
+  @include maxw($lg) {
+    padding: 80px 0;
+  }
+
+  @include maxw($md) {
+    padding: 40px 0;
+  } 
+
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include maxw($lg) {
+      display: block;
+    }
   }
 
   &__content {
     max-width: 520px;
     width: 100%;
+
+    @include maxw($lg) {
+      margin-bottom: 60px;
+    }
+
+    @include maxw($sm) {
+      max-width: 100%;
+    }
   }
 
   &__form {
     width: 520px;
+
+    @include maxw($md) {
+      width: 100%;
+    }
   }
 
   &__text {
     margin-bottom: 75px;
+
+    @include maxw($lg) {
+      margin-bottom: 40px;
+    }
   }
 
   &__item {
@@ -86,6 +114,10 @@
     margin-bottom: 60px;
     letter-spacing: 0.01em;
     color: $headings;
+
+    @include maxw($lg) {
+      margin-bottom: 30px;
+    }
 
     &::before {
       position: absolute;

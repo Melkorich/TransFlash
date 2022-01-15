@@ -2,10 +2,22 @@
   padding: 155px 0;
   background-color: rgba($headings, 0.5);
 
+  @include maxw($lg) {
+    padding: 80px 0;
+  }
+
+  @include maxw($md) {
+    padding: 40px 0;
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 80px;
     color: #fff;
+
+    @include maxw($md) {
+      margin-bottom: 40px;
+    }
   }
 
   &__map {
@@ -40,6 +52,11 @@
     display: inline-block;
     position: relative;
     z-index: 5;
+
+    @include maxw($md) {
+      width: 6px;
+      height: 6px;
+    }
 
     &:hover {
       &::before,
@@ -87,18 +104,69 @@
     // Fort Provides, Canada
     top: 22%;
     left: 13%;
+
+    @include maxw($md) {
+      top: 20%;
+    }
+
+    @include maxw($sm) {
+      top: 18%;
+    }
+
+    @include maxw($xs) {
+      top: 16%;
+    }
+
+    @include maxw($xsm) {
+      top: 12%;
+    }
   }
 
   .map__dot--2 {
     // Dallas, United states
     top: 40%;
     left: 18%;
+
+    @include maxw($md) {
+      top: 38%;
+    }
+
+    @include maxw($sm) {
+     top: 36%;
+    }
+
+    @include maxw($xs) {
+      top: 34%;
+    }
+
+    @include maxw($xsm) {
+      top: 30%;
+    }
+
+    .map__dot-text {
+
+      @include maxw($md) {
+        top: -30px;
+      }
+    }
   }
 
   .map__dot--3 {
     // New York, United states
     top: 37%;
     left: 25%;
+
+    @include maxw($sm) {
+      top: 34%;
+    }
+
+    @include maxw($xs) {
+      top: 31%;
+    }
+
+    @include maxw($xsm) {
+      top: 28%;
+    }
   }
 
   .map__dot--4 {
@@ -106,8 +174,20 @@
     top: 10%;
     left: 35%;
 
+    @include maxw($md) {
+      top: 8%;
+    }
+
+    @include maxw($xs) {
+      top: 4%;
+    }
+
     .map__dot-text {
       top: -37px;
+
+      @include maxw($md) {
+        top: -30px;
+      }
     }
   }
 
@@ -115,6 +195,21 @@
     // Matu Grosu, Brazilia
     top: 68%;
     left: 30%;
+
+    @include maxw($xs) {
+      top: 64%;
+    }
+
+    @include maxw($xsm) {
+      top: 60%;
+    }
+
+    .map__dot-text {
+
+      @include maxw($md) {
+        top: -30px;
+      }
+    }
   }
 
   .map__dot--6 {
@@ -123,6 +218,10 @@
     left: 53%;
     .map__dot-text {
       top: -37px;
+
+      @include maxw($md) {
+        top: -30px;
+      }
     }
   }
 
@@ -130,8 +229,29 @@
     // Paris, France
     top: 31%;
     left: 48%;
+
+    @include maxw($md) {
+      top: 29%;
+    }
+
+    @include maxw($sm) {
+      top: 27%;
+    }
+
+    @include maxw($xs) {
+      top: 25%;
+    }
+
+    @include maxw($xsm) {
+      top: 22%;
+    }
+
     .map__dot-text {
       top: -37px;
+
+      @include maxw($md) {
+        top: -30px;
+      }
     }
   }
 
@@ -139,14 +259,58 @@
     // Moscow, Russia
     top: 26%;
     left: 57%;
+
+    @include maxw($md) {
+      top: 25%;
+    }
+
+    @include maxw($sm) {
+      top: 23%;
+    }
+
+    @include maxw($xs) {
+      top: 22%;
+    }
+
+    @include maxw($xsm) {
+      top: 18%;
+    }
+
+    .map__dot-text {
+
+      @include maxw($md) {
+        top: -30px;
+      }
+    }
   }
 
   .map__dot--9 {
     //  Tokio, Japan
     top: 39%;
     right: 14%;
+ 
+    @include maxw($md) {
+      top: 37%;
+    }
+
+    @include maxw($sm) {
+      top: 35%;
+    }
+
+    @include maxw($xs) {
+      top: 34%;
+    }
+
+    @include maxw($xsm) {
+      top: 30%;
+    }
+
     .map__dot-text {
       top: -37px;
+
+      @include maxw($md) {
+        top: -30px;
+      }
     }
   }
 
@@ -154,6 +318,17 @@
     //   Sidney, Australia
     bottom: 23%;
     right: 15%;
+
+    @include maxw($md) {
+      bottom: 20%;
+    }
+
+    .map__dot-text {
+
+      @include maxw($md) {
+        top: -30px;
+      }
+    }
   }
 
 
@@ -172,6 +347,13 @@
     left: -45px;
     z-index: 4;
     display: none;
+
+    @include maxw($md) {
+      font-size: 10px;
+      padding: 4px;
+      top: -40px;
+      left: -50px;
+    }
 
     &::before {
       position: absolute;

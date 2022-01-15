@@ -3,6 +3,10 @@
   background-position: center;
   background-size: cover;
   padding: 160px 0;
+
+  @include maxw($lg){
+    padding: 80px 0;
+  } 
  
   &__cite {
     max-width: 600px;
@@ -13,6 +17,15 @@
     margin-bottom: 64px;
     padding-bottom: 20px;
     position: relative;
+
+    @include maxw($lg){
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    @include maxw($sm){
+      font-size: 20px;
+    }
 
     &::before,
     &::after {
@@ -26,6 +39,15 @@
       left: -20px;
       width: 60px;
       height: 60px;
+
+      @include maxw($lg){
+        left: 15px;
+        z-index: 0;
+      }
+
+      @include maxw($sm){
+        top: -20px;
+      }
     }
 
     &::after{
@@ -34,6 +56,10 @@
       height: 1px;
       left: 0;
       bottom: 0;
+
+      @include maxw($sm){
+        width: 100%;
+      }
     }
   }
 
