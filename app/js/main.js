@@ -69,6 +69,7 @@ for (let i = 0; i < menuLink.length; i++) {
   menuLink[i].addEventListener('click', function () {
     menuList.classList.remove('menu__list--active');
     menuBtn.classList.remove('menu__burger--active');
+    document.querySelector('body').classList.remove('scroll-block');
   });
 }
 
