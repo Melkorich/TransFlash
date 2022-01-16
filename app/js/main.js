@@ -45,16 +45,12 @@ $(function(){
   $("#phone").mask("+7 (999) 999-99-99");
 
   //smooth scroll
-    $("a[href^='#']").click(function(){
-      var _href = $(this).attr("href");
-      $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 1200);
-      return false;
+    $(".menu").on("click","a", function (event) {
+      event.preventDefault();
+      let id  = $(this).attr('href'),
+        top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top}, 1000);
     });
-
-  // $('.menu__link').on('click', function() {
-  //   $('.menu__burger').removeClass('menu__burger--active');
-  //   $('.menu__list').removeClass('menu__list--active');
-  // });
 
 }); 
 
