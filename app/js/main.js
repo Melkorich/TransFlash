@@ -1,5 +1,6 @@
 $(function(){
 
+  //sliders (slick)
   $('.hero-slider').slick({
     arrows: false,
     dots: true,
@@ -31,6 +32,7 @@ $(function(){
     ]
   });
 
+  //tabs
   $('.process__tabs-btn').on('click', function(e) {
     e.preventDefault();
     $('.process__tabs-btn').removeClass('process__tabs-btn--active');
@@ -42,6 +44,13 @@ $(function(){
 
   $("#phone").mask("+7 (999) 999-99-99");
 
+  //smooth scroll
+    $("a[href^='#']").click(function(){
+      var _href = $(this).attr("href");
+      $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, 1200);
+      return false;
+    });
+
   // $('.menu__link').on('click', function() {
   //   $('.menu__burger').removeClass('menu__burger--active');
   //   $('.menu__list').removeClass('menu__list--active');
@@ -49,6 +58,7 @@ $(function(){
 
 }); 
 
+//burger-menu functionality
 const menuBtn = document.querySelector('.menu__burger');
 const menuList = document.querySelector('.menu__list');
 const menuLink = document.querySelectorAll('.menu__link');
@@ -57,7 +67,7 @@ menuBtn.addEventListener('click', function() {
   menuList.classList.toggle('menu__list--active');
   menuBtn.classList.toggle('menu__burger--active');
   document.querySelector('body').classList.toggle('scroll-block');
-});
+}); 
 
 for (let i = 0; i < menuLink.length; i++) {
   menuLink[i].addEventListener('click', function () {
@@ -66,7 +76,35 @@ for (let i = 0; i < menuLink.length; i++) {
   });
 }
 
+//modal-window functionality
+const modal = document.querySelector('.modal');
+const modalBtnOpen = document.querySelector('.open-modal');
+const modalBtnClose = document.querySelector('.modal__close');
+const modalOverlay = document.querySelector('.modal__overlay');
 
+
+const openModal = function() {
+  modal.classList.remove('hidden');
+  modalOverlay.classList.remove('hidden');
+}
+
+const closeModal = function() {
+  modal.classList.add('hidden');
+  modalOverlay.classList.add('hidden');
+}
+
+modalBtnOpen.addEventListener('click', openModal);
+modalBtnClose.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
+})
+
+
+//map-dots functionality
 const mapBtn = document.querySelectorAll('.map__dot-btn');
 
 mapBtn.forEach(el => {
@@ -79,6 +117,7 @@ mapBtn.forEach(el => {
   });
 });
 
+//wow js animation
 wow = new WOW({ mobile: false })
 wow.init();
 

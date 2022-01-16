@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="wrapper">
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <div class="header__inner">
           <a class="logo" href="#">
@@ -18,32 +18,32 @@
           <nav class="menu">
             <ul class="menu__list">
               <li class="menu__item">
-                <a class="menu__link" href="#">
+                <a class="menu__link" href="#header">
                   Home
                 </a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">
+                <a class="menu__link" href="#about">
                   About us
                 </a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">
+                <a class="menu__link" href="#page">
                   Page
                 </a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">
+                <a class="menu__link" href="#service">
                   Service
                 </a>
               </li>
               <li class="menu__item">
-                <a class="menu__link" href="#">
+                <a class="menu__link" href="#contact">
                   Contact
                 </a>
               </li> 
               <li class="menu__item">
-                <a class="menu__link" href="#">
+                <a class="menu__link" href="#blog">
                   Blog
                 </a>
               </li>
@@ -52,12 +52,29 @@
               <span></span>
             </button>
           </nav>
-          <a class="header__get" href="#">
+          <button class="header__get open-modal">
             Get a quote
-          </a>
+          </button>
         </div>
       </div>
     </header> 
+
+    <div class="modal hidden">
+      <div class="modal__top">
+        <h3 class="modal__title">
+          Quick sign up
+        </h3>
+        <button class="modal__close">&times</button>
+      </div>
+      <form class="modal__form" action="#">
+        <input class="modal__input" type="text" name="name" placeholder="Name">
+        <input class="modal__input" type="text" name="mail" placeholder="Email">
+        <button class="modal__btn link">
+          Send
+        </button>
+      </form>
+    </div>
+    <div class="modal__overlay hidden"></div>
 
     <div class="hero-slider">
       <div class="hero-slider__item">
@@ -130,7 +147,7 @@
 
     <main class="main">
 
-      <section class="benefits">
+      <section class="benefits" id="about">
         <div class="container">
           <div class="benefits__inner">
             <ul class="benefits__items">
@@ -176,7 +193,7 @@
                   </div>
                 </div>
               </li>
-              <li class="benefits__item wow animate__animated animate__fadeIn" data-wow-offset="100" data-wow-delay=".4s">
+              <li class="benefits__item wow animate__animated animate__fadeIn" data-wow-offset="100" data-wow-delay=".3s">
                 <div class="benefits__box benefits-card">
                   <div class="benefits-card__image">
                     <img class="benefits-card__img" src="images/benefits/3.svg" alt="Sea freight">
@@ -191,7 +208,7 @@
                   </div>
                 </div>
               </li>
-              <li class="benefits__item wow animate__animated animate__fadeIn" data-wow-offset="100" data-wow-delay=".6s">
+              <li class="benefits__item wow animate__animated animate__fadeIn" data-wow-offset="100" data-wow-delay=".4s">
                 <div class="benefits__box benefits-card">
                   <div class="benefits-card__image">
                     <img class="benefits-card__img" src="images/benefits/4.svg" alt="Sea freight">
@@ -206,7 +223,7 @@
                   </div>
                 </div>
               </li>
-              <li class="benefits__item wow animate__animated animate__fadeIn" data-wow-offset="100" data-wow-delay=".8s">
+              <li class="benefits__item wow animate__animated animate__fadeIn" data-wow-offset="100" data-wow-delay=".6s">
                 <div class="benefits__box benefits-card">
                   <div class="benefits-card__image">
                     <img class="benefits-card__img" src="images/benefits/5.svg" alt="Sea freight">
@@ -221,7 +238,7 @@
                   </div>
                 </div>
               </li>
-              <li class="benefits__item wow animate__animated animate__fadeIn" data-wow-offset="100" data-wow-delay="1s">
+              <li class="benefits__item wow animate__animated animate__fadeIn" data-wow-offset="100" data-wow-delay=".8s">
                 <div class="benefits__box benefits-card">
                   <div class="benefits-card__image">
                     <img class="benefits-card__img" src="images/benefits/6.svg" alt="Sea freight">
@@ -398,7 +415,7 @@
         </div>
       </section>
 
-      <section class="process">
+      <section class="process" id="service">
         <div class="container">
           <div class="process__inner">
             <h2 class="process__title title wow animate__animated animate__fadeInUp" data-wow-offset="100">
@@ -516,7 +533,7 @@
         </div>
       </div>
 
-      <section class="team"> 
+      <section class="team" id="page"> 
         <div class="container"> 
           <ul class="team__items">
             <li class="team__item wow animate__animated animate__fadeIn" data-wow-offset="100">
@@ -772,7 +789,7 @@
         </div>
       </div>
 
-      <section class="contacts">
+      <section class="contacts" id="contact">
         <div class="container">
           <div class="contacts__inner">
             <div class="contacts__content">
@@ -817,7 +834,7 @@
         </div>
       </section>
 
-      <section class="news">
+      <section class="news" id="blog">
         <div class="container">
           <div class="news__inner">
             <h2 class="news__title title">
