@@ -79,7 +79,7 @@ const modalBtnOpen = document.querySelector('.open-modal');
 const modalBtnClose = document.querySelector('.modal__close');
 const modalOverlay = document.querySelector('.modal__overlay');
 
-
+ 
 const openModal = function() {
   modal.classList.remove('hidden');
   modalOverlay.classList.remove('hidden');

@@ -144,7 +144,6 @@
     }
 
     .map__dot-text {
-
       @include maxw($md) {
         top: -30px;
       }
@@ -277,7 +276,6 @@
     }
 
     .map__dot-text {
-
       @include maxw($md) {
         top: -30px;
       }
@@ -324,7 +322,6 @@
     }
 
     .map__dot-text {
-
       @include maxw($md) {
         top: -30px;
       }
@@ -367,14 +364,12 @@
       border-right: 6px solid transparent;
       border-left: 6px solid transparent;
     }
-    
   }
 
   .map__dot-text--active {
    display: block;
    z-index: 10;
   }
-
 }
 
 .btn-circles {
@@ -384,6 +379,10 @@
   &::after {
     position: absolute;
     content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.6s, visibility 0.6s;
@@ -393,21 +392,13 @@
     width: 27px;
     height: 27px;
     background-color: rgba(71, 191, 111, 0.3);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
   }
 
   &::after{
     width: 43px;
     height: 43px;
     background-color: rgba(71, 191, 111, 0.2);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-  }
+  } 
 }
 
 .btn-circles--active {

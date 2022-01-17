@@ -102,7 +102,6 @@ background-color: #032203;
     }
   }
 
-
   .social-icons--footer {
     position: static;
     opacity: 1;
@@ -175,9 +174,7 @@ background-color: #032203;
     min-width: 52px;
     height: 52px;
     padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexc();
     border-radius: 0px 4px 4px 0px;
     background-color: $accent;
     border: 1px solid transparent;
@@ -190,6 +187,4 @@ background-color: #032203;
       border: 1px solid #31A357;
     }
   }
-
-  
 }

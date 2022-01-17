@@ -146,13 +146,13 @@
     line-height: 1.18;
     @extend %Raleway-600;
 
-    &:placeholder {
+    &::placeholder {
       color: $text;
       font-size: 16px;
       line-height: 1.18;
       @extend %Raleway-500;
     }
-  }
+  } 
 
   &__textarea {
     display: block;
@@ -168,7 +168,7 @@
     line-height: 1.18;
     @extend %Raleway-600;
 
-    &:placeholder {
+    &::placeholder {
       color: $text;
       font-size: 16px;
       line-height: 1.18;
