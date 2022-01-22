@@ -1,13 +1,14 @@
 .sponsors {
-  padding: 69px 0;
+  padding: 69px 0 39px;
   background-color: #F8F8F8;
 
   @include maxw($xs) {
-    padding: 40px 0;
+    padding: 40px 0 39px;
   }
 
   &__list {
     display: flex;
+    padding-bottom: 20px;
 
     @include maxw($xxl) {
       overflow: auto;
@@ -34,17 +35,17 @@
   }
 
   ::-webkit-scrollbar {
-    height: 14px;
+    height: 10px; 
   }
 
   ::-webkit-scrollbar-track {
-    background-color: rgba($headings, 0.4);
-    box-shadow: 0 0 2px rgba($headings, 0.5);
+    background-color: rgba($headings, 0.2);
+    box-shadow: 0 0 2px rgba($headings, 0.3);
   }
 
   ::-webkit-scrollbar-thumb {
     background-color: $accent;
     border-radius: 10px;
-    border: 2px solid rgba($headings, 0.5);
+    border: 2px solid rgba($headings, 0.4);
   }
 }
